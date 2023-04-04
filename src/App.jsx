@@ -14,16 +14,14 @@ import Footer from './components/footer/Footer'
 
 function App() {
    const dispatch = useDispatch()
-   const {home: {url}} = useSelector((state) => state)
-   console.log(url)
-  useEffect(() => {
+   const {url} = useSelector((state) => state.home)
+   useEffect(() => {
     fetchApiConfig()
     genresCall()
     },[])
    const fetchApiConfig = () => {
     fetchDataFromApi("/configuration")
     .then(res => {
-      console.log(res)
       const url = {
           backdrop: res.images.secure_base_url + "original", 
           poster: res.images.secure_base_url + "original", 
@@ -41,8 +39,7 @@ function App() {
     })
     const data = await Promise.all(promises)
     data.map(({genres}) => {
-      return genres.map((item) => (allGenres[item.id] =
-      item))
+      return genres.map((item) => (allGenres[item.id] = item))
     })
     dispatch(getGenres(allGenres))
   }

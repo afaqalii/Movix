@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 import "./header.scss";
 
@@ -72,9 +72,11 @@ const Header = () => {
     return (
         <header className={`header ${mobileMenu ? "mobileView" : ""} ${show} `}>
           <ContentWrapper>
+            <Link to="/">
             <div className="logo">
               <img src={logo} />
             </div>
+            </Link>
             <ul className="menuItems">
               <li className="menuItem" onClick={() => navigationHandler("movies")}>Movies</li>
               <li className="menuItem" onClick={() => navigationHandler("tv")}>TV Shows</li>

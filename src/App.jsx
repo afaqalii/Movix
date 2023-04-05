@@ -7,10 +7,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import SearchrResults from './pages/searchResults/SearchrResults'
 import Details from './pages/details/details'
-import Explore from './pages/explore/explore'
 import PageNotFound from './pages/404/pageNotFound'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
+import Explore from './pages/explore/Explore'
 
 function App() {
    const dispatch = useDispatch()

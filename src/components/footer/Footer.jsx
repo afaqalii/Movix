@@ -9,6 +9,7 @@ import {
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -42,6 +43,9 @@ const Footer = () => {
                     <span className="icon">
                         <FaLinkedin />
                     </span>
+                </div>
+                <div className="reference">
+                    <p>Front-end developed by  <a href="https://www.linkedin.com/in/afaqalii/" target="_blank">Afaq Ali</a> </p>
                 </div>
             </ContentWrapper>
         </footer>

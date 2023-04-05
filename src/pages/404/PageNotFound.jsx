@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style.scss";
+import "./404.scss";
 
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
